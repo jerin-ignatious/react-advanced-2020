@@ -2,7 +2,7 @@
 
 #### useState
 
-1. Birthday Reminder
+1. Anime Release Reminder
 
 #### useEffect and Conditional Rendering
 
