@@ -7,7 +7,7 @@ const UseEffectBasics = () => {
   useEffect (() => {
     if (value > 0)
     document.title = `(${value}) New Messages`;
-  });
+  }, [value]);
 return <>
   <h2>{value}</h2>
   <button className='btn' onClick={() => {setValue(value+1)}}>
