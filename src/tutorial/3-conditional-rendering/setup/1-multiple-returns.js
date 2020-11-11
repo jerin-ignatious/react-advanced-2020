@@ -12,7 +12,7 @@ const MultipleReturns = () => {
   if(isError){
     return <h2>Error...</h2>
   }
-return <h2>{user}</h2>;
+  return <h2>{user}</h2>;
 };
 
 export default MultipleReturns;
