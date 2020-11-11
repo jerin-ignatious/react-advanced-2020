@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
-const url = 'https://api.github.com/users/QuincyLarson';
+const url = 'https://api.github.com/users/jerin-ignatious';
 const MultipleReturns = () => {
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [user, s0etUser] = useState('default user');
+  const [user, setUser] = useState('default user');
 
+  useEffect(() => {
+    fetch(url).then((resp) => resp.json())
+    .then((user) => {
+      const {login} = user;
+      setUser(login);
+      setIsLoading(false);
+    })
+    .catch((error) => console.log(error));
+  }, []);
   if(isLoading){
     return <h2>Loading...</h2>
   }
